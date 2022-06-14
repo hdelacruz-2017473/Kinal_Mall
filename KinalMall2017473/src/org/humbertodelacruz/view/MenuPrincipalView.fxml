@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="534.0" prefWidth="969.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.humbertodelacruz.controller.MenuPrincipalController">
+   <children>
+      <ImageView fitHeight="565.0" fitWidth="969.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/logo.png" />
+         </image>
+      </ImageView>
+      <MenuBar prefHeight="44.0" prefWidth="164.0" stylesheets="@../resource/KinalMallCSS.css">
+        <menus>
+          <Menu mnemonicParsing="false" text="Módulos">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaDepartamento" text="Departamentos" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaCargo" text="Cargos" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaHorario" text="Horarios" />
+              <MenuItem mnemonicParsing="false" onAction="#ventanaAdministracion" text="Administración" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaTipoCliente" text="Tipos Cliente" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaLocal" text="Locales" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaProveedor" text="Proveedores" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="?">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#ventanaProgramador" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <ImageView fitHeight="37.0" fitWidth="39.0" layoutX="922.0" layoutY="14.0" onMouseClicked="#ventanaLogin" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/regresar.png" />
+         </image></ImageView>
+   </children>
+</AnchorPane>

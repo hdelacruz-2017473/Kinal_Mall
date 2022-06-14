@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="534.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.humbertodelacruz.controller.LocalController">
+   <children>
+      <Pane layoutX="894.0" layoutY="-3.0" prefHeight="540.0" prefWidth="540.0" rotate="-135.0" style="-fx-background-color: #3db1d4; -fx-background-radius: 50 50 50 50;">
+         <children>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="407.0" layoutY="416.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true" rotate="135.0">
+               <image>
+                  <Image url="@../images/inicio.png" />
+               </image>
+            </ImageView>
+         </children></Pane>
+      <Pane prefHeight="534.0" prefWidth="307.0" style="-fx-background-color: #3db1d4;">
+         <children>
+            <Pane layoutY="29.0" prefHeight="46.0" prefWidth="307.0" style="-fx-background-color: #AED6F1; -fx-background-radius: 30 30 30 30;">
+               <children>
+                  <Label layoutX="97.0" layoutY="9.0" text="locales">
+                     <font>
+                        <Font name="Copperplate Gothic Bold" size="25.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <VBox layoutX="18.0" layoutY="276.0" prefHeight="208.0" prefWidth="272.0">
+               <children>
+                  <Button fx:id="btnNuevo" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#nuevo" prefHeight="51.0" prefWidth="292.0" styleClass="button1" stylesheets="@../resource/AdministracionCSS.css" text="Nuevo">
+                     <graphic>
+                        <ImageView fx:id="imgNuevo" fitHeight="39.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/nuevo.png" />
+                           </image></ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Eras Demi ITC" size="19.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnEliminar" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#eliminar" prefHeight="51.0" prefWidth="292.0" styleClass="button1" stylesheets="@../resource/AdministracionCSS.css" text="Eliminar">
+                     <graphic>
+                        <ImageView fx:id="imgEliminar" fitHeight="39.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/eliminar.png" />
+                           </image></ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Eras Demi ITC" size="19.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnEditar" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#editar" prefHeight="51.0" prefWidth="292.0" styleClass="button1" stylesheets="@../resource/AdministracionCSS.css" text="Editar">
+                     <graphic>
+                        <ImageView fx:id="imgEditar" fitHeight="39.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/editar.png" />
+                           </image></ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Eras Demi ITC" size="19.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnReporte" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#reporte" prefHeight="51.0" prefWidth="292.0" styleClass="button1" stylesheets="@../resource/AdministracionCSS.css" text="Reporte">
+                     <graphic>
+                        <ImageView fx:id="imgReporte" fitHeight="39.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/reporte.png" />
+                           </image></ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Eras Demi ITC" size="19.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+            <Circle fill="#aed6f1" layoutX="154.0" layoutY="157.0" radius="68.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+            <ImageView fitHeight="101.0" fitWidth="100.0" layoutX="104.0" layoutY="107.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/local.png" />
+               </image></ImageView>
+         </children>
+      </Pane>
+      <GridPane layoutX="607.0" layoutY="24.0" prefHeight="30.0" prefWidth="258.0">
+        <columnConstraints>
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="126.0" minWidth="10.0" prefWidth="117.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="155.0" minWidth="10.0" prefWidth="141.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Código Local">
+               <font>
+                  <Font name="Eras Demi ITC" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtCodigoLocal" editable="false" GridPane.columnIndex="1" />
+         </children>
+      </GridPane>
+      <GridPane layoutX="351.0" layoutY="73.0" prefHeight="30.0" prefWidth="252.0">
+         <columnConstraints>
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="121.0" minWidth="10.0" prefWidth="92.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="169.0" minWidth="10.0" prefWidth="134.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label prefHeight="18.0" prefWidth="84.0" text="Saldo  Favor">
+               <font>
+                  <Font name="Eras Demi ITC" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtSaldoFavor" editable="false" prefHeight="25.0" prefWidth="117.0" GridPane.columnIndex="1" />
+         </children>
+      </GridPane>
+      <GridPane layoutX="610.0" layoutY="120.0" prefHeight="30.0" prefWidth="258.0">
+         <columnConstraints>
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="126.0" minWidth="10.0" prefWidth="115.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="155.0" minWidth="10.0" prefWidth="143.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label prefHeight="18.0" prefWidth="88.0" text="Valor Local">
+               <font>
+                  <Font name="Eras Demi ITC" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtValorLocal" editable="false" prefHeight="25.0" prefWidth="131.0" GridPane.columnIndex="1" />
+         </children>
+      </GridPane>
+      <GridPane layoutX="603.0" layoutY="73.0" prefHeight="30.0" prefWidth="265.0">
+         <columnConstraints>
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="121.0" minWidth="10.0" prefWidth="109.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="155.0" minWidth="10.0" prefWidth="125.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label prefHeight="18.0" prefWidth="88.0" text="Saldo Contra">
+               <font>
+                  <Font name="Eras Demi ITC" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtSaldoContra" editable="false" prefHeight="25.0" prefWidth="147.0" GridPane.columnIndex="1" />
+         </children>
+      </GridPane>
+      <GridPane layoutX="351.0" layoutY="120.0" prefHeight="30.0" prefWidth="252.0">
+         <columnConstraints>
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="175.0" minWidth="10.0" prefWidth="106.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="186.0" minWidth="10.0" prefWidth="146.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label prefHeight="18.0" prefWidth="100.0" text="Disponibilidad">
+               <font>
+                  <Font name="Eras Demi ITC" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtDisponibilidad" editable="false" prefHeight="25.0" prefWidth="149.0" GridPane.columnIndex="1" />
+         </children>
+      </GridPane>
+      <GridPane layoutX="878.0" layoutY="120.0" prefHeight="30.0" prefWidth="286.0">
+         <columnConstraints>
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="158.99998474121094" minWidth="10.0" prefWidth="144.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="155.0" minWidth="10.0" prefWidth="128.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label text="Valor Administración">
+               <font>
+                  <Font name="Eras Demi ITC" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtValorAdministracion" editable="false" prefHeight="25.0" prefWidth="124.0" GridPane.columnIndex="1" />
+         </children>
+      </GridPane>
+      <GridPane layoutX="886.0" layoutY="73.0" prefHeight="30.0" prefWidth="278.0">
+         <columnConstraints>
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="175.0" minWidth="10.0" prefWidth="133.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="187.0" minWidth="10.0" prefWidth="139.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label prefHeight="18.0" prefWidth="120.0" text="Meses Pendientes">
+               <font>
+                  <Font name="Eras Demi ITC" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtMesesPendientes" editable="false" prefHeight="25.0" prefWidth="158.0" GridPane.columnIndex="1" />
+         </children>
+      </GridPane>
+      <TableView fx:id="tblLocal" layoutX="316.0" layoutY="176.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="344.0" prefWidth="871.0" stylesheets="@../resource/TablaCSS.css">
+        <columns>
+          <TableColumn fx:id="colCodigoLocal" prefWidth="109.0" text="Código Local" />
+          <TableColumn fx:id="colSaldoFavor" prefWidth="134.0" text="Saldo  Favor" />
+            <TableColumn fx:id="colSaldoContra" prefWidth="116.0" text="Saldo Contra" />
+            <TableColumn fx:id="colMesesPendientes" prefWidth="127.0" text="Meses Pendientes" />
+            <TableColumn fx:id="colDisponibilidad" prefWidth="122.0" text="Disponibilidad" />
+            <TableColumn fx:id="colValorLocal" prefWidth="124.0" text="Valor Local" />
+            <TableColumn fx:id="colValorAdministracion" prefWidth="136.0" text="Valor Administración" />
+        </columns>
+      </TableView>
+      <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="326.0" layoutY="14.0" onMouseClicked="#ventanaCuentaPorCobrar" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/cuentaPorCobrar.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

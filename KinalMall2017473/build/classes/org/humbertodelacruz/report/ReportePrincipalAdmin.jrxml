@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReportePrincipalAdmin" language="groovy" pageWidth="792" pageHeight="612" orientation="Landscape" columnWidth="752" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f2c1b4d2-f43e-4968-88b2-6ae7b52e08e5">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="codAdministracion" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["C:\\Users\\famil\\OneDrive\\Documentos\\NetBeansProjects\\KinalMall2017473\\src\\org\\humbertodelacruz\\report\\"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select * from Administracion where codigoAdministracion = $P{codAdministracion}]]>
+	</queryString>
+	<field name="codigoAdministracion" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="direccion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefono" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="572">
+			<image scaleImage="FillFrame">
+				<reportElement x="0" y="0" width="752" height="572" uuid="3484d6cd-c46f-4d6d-9da9-f7b1f51136c1"/>
+				<imageExpression><![CDATA["C:\\Users\\famil\\OneDrive\\Documentos\\NetBeansProjects\\KinalMall2017473\\src\\org\\humbertodelacruz\\images\\marco.png"]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<title>
+		<band height="121" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement x="575" y="0" width="153" height="119" uuid="1254570c-e737-4224-b8a0-b40a0c7d7b80"/>
+				<imageExpression><![CDATA["C:\\Users\\famil\\OneDrive\\Documentos\\NetBeansProjects\\KinalMall2017473\\src\\org\\humbertodelacruz\\images\\logotipo.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<textField>
+				<reportElement x="100" y="3" width="82" height="20" uuid="b33b636f-cb25-41b9-bdfa-3506b31a58f5"/>
+				<textFieldExpression><![CDATA[$F{codigoAdministracion}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="18" y="3" width="70" height="20" uuid="d6540e0c-131f-4637-9eef-c2bbed91772e"/>
+				<textElement textAlignment="Center">
+					<font fontName="Copperplate Gothic Bold" size="12"/>
+				</textElement>
+				<text><![CDATA[Código ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="214" y="4" width="70" height="20" uuid="adb79f9b-fa9c-45f8-9723-630af4f7d3f5"/>
+				<textElement textAlignment="Center">
+					<font fontName="Copperplate Gothic Bold" size="12"/>
+				</textElement>
+				<text><![CDATA[Dirección]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="305" y="4" width="100" height="20" uuid="45348d81-9e26-442a-9b8c-f1454bea3222"/>
+				<textFieldExpression><![CDATA[$F{direccion}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="80" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<subreport>
+				<reportElement x="0" y="0" width="752" height="125" uuid="a6a4a8c5-8d61-40de-bf67-d8c71d2fbe8c"/>
+				<subreportParameter name="codCliente">
+					<subreportParameterExpression><![CDATA[$P{codAdministracion}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "SubReporte.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

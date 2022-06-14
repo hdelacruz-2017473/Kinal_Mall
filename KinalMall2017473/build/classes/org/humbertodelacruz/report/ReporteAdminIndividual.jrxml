@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteAdminIndividual" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ace56960-75a3-4e62-a658-a3ff9d76d89a">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="629"/>
+	<parameter name="codAdministracion" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[call sp_BuscarAdministracion($P{codAdministracion});]]>
+	</queryString>
+	<field name="codigoAdministracion" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="direccion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefono" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="752">
+			<image scaleImage="FillFrame">
+				<reportElement x="0" y="0" width="572" height="752" uuid="253441a5-87b0-4911-a09e-eb937d8f0e65"/>
+				<imageExpression><![CDATA["C:\\Users\\famil\\OneDrive\\Documentos\\NetBeansProjects\\KinalMall2017473\\src\\org\\humbertodelacruz\\images\\marco.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="304" y="716" width="268" height="20" uuid="8f9468e9-1aa0-4d13-9d01-fad7b5d4bb20"/>
+				<textElement>
+					<font fontName="Arial Rounded MT Bold" size="12"/>
+				</textElement>
+				<text><![CDATA[Humberto Alexander de la Cruz chanchavac]]></text>
+			</staticText>
+		</band>
+	</background>
+	<title>
+		<band height="133" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement x="412" y="0" width="136" height="133" uuid="89fd19db-68a5-4cd2-b483-4cb79aafdce1"/>
+				<imageExpression><![CDATA["C:\\Users\\famil\\OneDrive\\Documentos\\NetBeansProjects\\KinalMall2017473\\src\\org\\humbertodelacruz\\images\\logotipo.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="24" y="41" width="245" height="29" forecolor="#FFFFFF" uuid="9430be78-2498-4af5-ba71-6a546673754a"/>
+				<textElement>
+					<font fontName="Copperplate Gothic Bold" size="22"/>
+				</textElement>
+				<text><![CDATA[ADMINISTRACIÓN]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="43" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="48" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="9" width="572" height="32" forecolor="#FFFFFF" backcolor="#46DEF3" uuid="932b20fc-1810-4862-a4d7-ac5b688b932f"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="30" y="16" width="165" height="20" uuid="0d4f2a19-c1c5-4352-8116-d1197f0747b8"/>
+				<textElement>
+					<font fontName="Copperplate Gothic Bold" size="12"/>
+				</textElement>
+				<text><![CDATA[Código Administración]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="252" y="16" width="75" height="20" uuid="717cc33d-5a89-4133-b6ee-8caa230e32a4"/>
+				<textElement>
+					<font fontName="Copperplate Gothic Bold" size="12"/>
+				</textElement>
+				<text><![CDATA[Dirección]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="470" y="16" width="73" height="20" uuid="bafb0ead-1609-4687-918b-1cf24899c228"/>
+				<textElement>
+					<font fontName="Copperplate Gothic Bold" size="12"/>
+				</textElement>
+				<text><![CDATA[Teléfono]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="43" splitType="Stretch">
+			<textField>
+				<reportElement x="50" y="13" width="80" height="20" uuid="101a55e2-7f2a-46fa-bf56-8ad809f1efed"/>
+				<textFieldExpression><![CDATA[$F{codigoAdministracion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="230" y="13" width="119" height="20" uuid="5c0b05ca-e6ee-4636-8a11-522140af99e9"/>
+				<textFieldExpression><![CDATA[$F{direccion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="463" y="13" width="88" height="20" uuid="d3a2ee54-ecb0-4ecb-bc22-1c4d88a5b092"/>
+				<textFieldExpression><![CDATA[$F{telefono}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="38" width="572" height="1" forecolor="#004599" uuid="98d65b14-df44-4be1-a67e-a9801f2a94e8"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
